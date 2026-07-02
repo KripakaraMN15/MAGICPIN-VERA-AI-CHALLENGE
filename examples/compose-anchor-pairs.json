@@ -1,0 +1,164 @@
+[
+  {
+    "description": "Research digest trigger for dentists",
+    "input": {
+      "category": {
+        "slug": "dentists",
+        "digest": [
+          {
+            "id": "d_2026W17_jida_fluoride",
+            "title": "3-month fluoride varnish recall outperforms 6-month for high-risk adult caries",
+            "source": "JIDA Oct 2026, p.14",
+            "trial_n": 2100,
+            "summary": "Multi-center Indian trial shows 38% lower caries recurrence with 3-month vs 6-month recall in adults with active decay history. No effect in low-risk patients.",
+            "actionable": "Reassess recall interval for adults flagged high-risk in your charting"
+          }
+        ]
+      },
+      "merchant": {
+        "merchant_id": "m_001_drmeera_dentist_delhi",
+        "identity": {
+          "name": "Dr. Meera's Dental Clinic",
+          "owner_first_name": "Meera",
+          "locality": "Lajpat Nagar",
+          "city": "Delhi"
+        },
+        "category_slug": "dentists",
+        "offers": [
+          {
+            "status": "active",
+            "title": "Dental Cleaning @ ₹299"
+          }
+        ]
+      },
+      "trigger": {
+        "kind": "research_digest",
+        "suppression_key": "research:dentists:2026-W17:smoke:1777813750",
+        "payload": {
+          "top_item_id": "d_2026W17_jida_fluoride"
+        }
+      },
+      "customer": null
+    },
+    "output": {
+      "body": "Dr. Meera, compliance update: 3-month fluoride varnish recall outperforms 6-month for high-risk adult caries Multi-center Indian trial shows 38% lower caries recurrence with 3-month vs 6-month recall in adults with active decay history. No effect in low-risk patients. Suggested next step: Reassess recall interval for adults flagged high-risk in your charting Want me to pull the key points and draft a shareable post for you?",
+      "cta": "open_ended",
+      "send_as": "vera",
+      "suppression_key": "research:dentists:2026-W17:smoke:1777813750",
+      "rationale": "Digest/seasonal trigger; grounded summary + offer to externalize effort into a draft, inviting reply.",
+      "template_name": "vera_research_digest_v1",
+      "template_params": [
+        "Dr. Meera",
+        "3-month fluoride varnish recall outperforms 6-month for high-risk adult caries",
+        "Reassess recall interval for adults flagged high-risk in your charting"
+      ]
+    }
+  },
+  {
+    "description": "Compliance alert trigger",
+    "input": {
+      "category": {
+        "slug": "dentists",
+        "digest": [
+          {
+            "id": "d_2026_dci_radiograph",
+            "title": "DCI revised radiograph dose limits effective 2026-12-15",
+            "source": "DCI Notification 2026/47",
+            "deadline_iso": "2026-12-15",
+            "summary": "Maximum dose per IOPA exposure drops from 1.5 mSv to 1.0 mSv. E-speed film passes at the new limit; D-speed does not. Digital RVG sensors unaffected.",
+            "actionable": "Audit your X-ray setup before Dec 15; document E-speed or RVG in your SOPs"
+          }
+        ]
+      },
+      "merchant": {
+        "merchant_id": "m_001_drmeera_dentist_delhi",
+        "identity": {
+          "name": "Dr. Meera's Dental Clinic",
+          "owner_first_name": "Meera",
+          "locality": "Lajpat Nagar",
+          "city": "Delhi"
+        },
+        "category_slug": "dentists"
+      },
+      "trigger": {
+        "kind": "regulation_change",
+        "suppression_key": "compliance:dci_radiograph:2026:smoke:1777813750",
+        "payload": {
+          "top_item_id": "d_2026_dci_radiograph"
+        }
+      },
+      "customer": null
+    },
+    "output": {
+      "body": "Dr. Meera, compliance update: DCI revised radiograph dose limits effective 2026-12-15. Deadline: 2026-12-15 Maximum dose per IOPA exposure drops from 1.5 mSv to 1.0 mSv. E-speed film passes at the new limit; D-speed does not. Digital RVG sensors unaffected. Suggested next step: Audit your X-ray setup before Dec 15; document E-speed or RVG in your SOPs I can draft a customer notice and a staff checklist. Reply YES/STOP.",
+      "cta": "binary_yes_stop",
+      "send_as": "vera",
+      "suppression_key": "compliance:dci_radiograph:2026:smoke:1777813750",
+      "rationale": "High-urgency compliance/alert trigger; cites provided source/payload facts and offers a grounded stock-check/customer notice draft.",
+      "template_name": "vera_compliance_alert_v1",
+      "template_params": [
+        "Dr. Meera",
+        "DCI revised radiograph dose limits effective 2026-12-15",
+        "Audit your X-ray setup before Dec 15; document E-speed or RVG in your SOPs"
+      ]
+    }
+  },
+  {
+    "description": "Customer recall trigger",
+    "input": {
+      "category": {
+        "slug": "dentists"
+      },
+      "merchant": {
+        "merchant_id": "m_001_drmeera_dentist_delhi",
+        "identity": {
+          "name": "Dr. Meera's Dental Clinic",
+          "owner_first_name": "Meera"
+        },
+        "category_slug": "dentists",
+        "offers": [
+          {
+            "status": "active",
+            "title": "Dental Cleaning @ ₹299"
+          }
+        ]
+      },
+      "trigger": {
+        "kind": "recall_due",
+        "suppression_key": "recall:c_001_priya_for_m001:6mo:smoke:1777813750",
+        "payload": {
+          "last_service_date": "2026-05-12",
+          "due_date": "2026-11-12",
+          "available_slots": [
+            {
+              "label": "Wed 5 Nov, 6pm"
+            },
+            {
+              "label": "Thu 6 Nov, 5pm"
+            }
+          ]
+        }
+      },
+      "customer": {
+        "identity": {
+          "name": "Priya"
+        }
+      }
+    },
+    "output": {
+      "body": "Hi Priya, Dr. Meera's Dental Clinic here. It's been since 2026-05-12 — your recall is due around 2026-11-12. 2 slots available: Wed 5 Nov, 6pm or Thu 6 Nov, 5pm. Dental Cleaning @ ₹299. Reply 1 for the first slot, 2 for the second, or share a time that works.",
+      "cta": "multi_choice_slot",
+      "send_as": "merchant_on_behalf",
+      "suppression_key": "recall:c_001_priya_for_m001:6mo:smoke:1777813750",
+      "rationale": "Customer recall trigger; uses provided last/due dates and slots, includes a concrete offer if available, and uses a low-friction slot CTA.",
+      "template_name": "merchant_recall_reminder_v1",
+      "template_params": [
+        "Priya",
+        "Dr. Meera's Dental Clinic",
+        "2026-11-12",
+        "Wed 5 Nov, 6pm / Thu 6 Nov, 5pm",
+        "Dental Cleaning @ ₹299"
+      ]
+    }
+  }
+]
